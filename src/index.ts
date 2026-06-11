@@ -17,6 +17,10 @@ app.use("/api/characters", charactersRouter);
 app.use("/api/conversations", conversationsRouter);
 app.use("/api/config", configRouter);
 
+app.get("/health", (_req, res) => {
+  res.json({ status: "ok" });
+});
+
 app.get("/api/health", (_req, res) => {
   res.json({ status: "ok" });
 });
